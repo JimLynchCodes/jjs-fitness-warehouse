@@ -112,8 +112,8 @@ function RootComponent() {
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="flex items-center justify-between px-6 py-6 sm:px-10">
             <span className="font-display text-2xl tracking-widest text-foreground">
-              Pineapple&nbsp;
-              <span className="text-gold">Xpress</span>
+              JJ's Fitness&nbsp;
+              <span className="text-gold">Warehouse</span>
             </span>
 
             <>
@@ -219,21 +219,20 @@ function RootComponent() {
               className="animate-drift-up text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground sm:text-sm"
               style={{ animationDelay: "0.1s" }}
             >
-              The best delivery service in New Jersey.
+              Greater NYC | Wholesale & Retail
             </p>
             <h1
-              className="font-display animate-drift-up text-glow-gold mt-4 flex flex-col text-[12vw] leading-none text-foreground sm:flex-row sm:gap-x-4 sm:text-[9vw] lg:text-9xl"
+              className="font-display animate-drift-up text-glow-gold mt-4 flex flex-col text-[12vw] leading-tight text-foreground sm:gap-x-4 sm:text-[9vw] lg:text-9xl"
               style={{ animationDelay: "0.25s" }}
             >
-              <span>Challenge</span>
-              <span className="text-gold">Accepted.</span>
+              <span className="whitespace-nowrap">YOUR LOCAL SOURCE</span>
+              <span className="text-gold whitespace-nowrap">FOR PERFORMANCE.</span>
             </h1>
             <p
               className="animate-drift-up mt-6 max-w-xl text-base text-muted-foreground sm:text-lg"
               style={{ animationDelay: "0.4s" }}
             >
-              Premium vapes, disposables, and smoke shop essentials — delivered online or waiting
-              for you at the counter.
+              Premium sports nutrition, fitness essentials, and performance products for athletes, gyms, and retailers across the New York metro area.
             </p>
 
             <Outlet />
@@ -241,7 +240,7 @@ function RootComponent() {
 
           <footer className="px-6 pb-8 text-center sm:px-10">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground/70">
-              © 2026 Pineapple Xpress
+              © 2026 JJ's Fitness Warehouse
             </p>
           </footer>
         </div>

@@ -5,20 +5,20 @@ import Cards, { type Store } from "@/components/Cards";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pineapple Xpress — Pineapple Xpress & NIC Vineland" },
+      { title: "JJ's Fitness Warehouse — JJ's Fitness Warehouse & NIC Vineland" },
       {
         name: "description",
         content:
-          "Order online from Pineapple Xpress or visit NIC Vineland at 1381 West Landis Ave, Vineland, NJ.",
+          "Order online from JJ's Fitness Warehouse or visit NIC Vineland at 1381 West Landis Ave, Vineland, NJ.",
       },
       {
         property: "og:title",
-        content: "Pineapple Xpress — Pineapple Xpress & NIC Vineland",
+        content: "JJ's Fitness Warehouse — JJ's Fitness Warehouse & NIC Vineland",
       },
       {
         property: "og:description",
         content:
-          "Order online from Pineapple Xpress or visit NIC Vineland at 1381 West Landis Ave, Vineland, NJ.",
+          "Order online from JJ's Fitness Warehouse or visit NIC Vineland at 1381 West Landis Ave, Vineland, NJ.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const stores: Store[] = [
   {
-    name: "Pineapple Xpress Vineland",
+    name: "JJ's Fitness Warehouse Vineland",
     tagline: "Vineland",
     description:
       `1381 W Landis Ave #1381B, Vineland, NJ 08360`,
@@ -40,7 +40,7 @@ const stores: Store[] = [
     },
   },
   {
-    name: "Pineapple Xpress Burlington",
+    name: "JJ's Fitness Warehouse Burlington",
     tagline: "Burlington",
     description:
       `1805 Mt Holly Rd Ste 200, Burlington, NJ 08016`,

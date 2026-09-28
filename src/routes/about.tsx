@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [{ title: "About Us — Pineapple Xpress" }],
+    meta: [{ title: "About Us — JJ's Fitness Warehouse" }],
   }),
   component: AboutPage,
 });
@@ -12,14 +12,18 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <div className="animate-route-slide-up mt-12 w-full max-w-2xl text-lg text-muted-foreground">
-      <h2 className="font-display text-5xl text-gold">About Pineapple Xpress</h2>
+      <h2 className="font-display text-5xl text-gold">About JJ's Fitness Warehouse</h2>
       <br/>
       <p>
-        At Pineapple Xpress, we’re all about bringing premium nicotine vapes and disposables straight to your fingertips. With the convenience of an online destination we make it easy to browse and order from a curated collection of the best, most trusted brands all in one place and have them shipped right to your door.
+        At JJ's Fitness Warehouse, we're dedicated to bringing quality sports nutrition, fitness essentials, and performance products to athletes, gyms, retailers, and fitness enthusiasts throughout the greater NYC area.
       </p>
       <br/>
       <p>
-        Whether you're exploring new flavors or restocking a favorite, Pineapple Xpress is designed to give you a fast, reliable, and hassle-free experience every time.
+        Whether you're stocking up on training essentials, replenishing your gym's inventory, or shopping for your own fitness goals, we make it easy to find and order the products you need with a straightforward, reliable experience.
+      </p>
+      <br/>
+      <p>
+        From individual purchases to wholesale orders, JJ's Fitness Warehouse is your local source for performance.
       </p>
       <br/>
       <ol className="space-y-4 text-left">
@@ -28,8 +32,8 @@ function AboutPage() {
             1
           </span>
           <div className="pt-1">
-            <h3 className="font-semibold text-xl text-foreground">Fresh</h3>
-            <p className="mt-1 text-muted-foreground">We only sell the latest and most popular nicotine vapes.</p>
+            <h3 className="font-semibold text-xl text-foreground">Quality</h3>
+            <p className="mt-1 text-muted-foreground">Carefully selected fitness and sports nutrition products designed to support training, performance, and recovery.</p>
           </div>
         </li>
 
@@ -38,8 +42,8 @@ function AboutPage() {
             2
           </span>
           <div className="pt-1">
-            <h3 className="font-semibold text-xl text-foreground">Legit</h3>
-            <p className="mt-1 text-muted-foreground">100% authentic products.</p>
+            <h3 className="font-semibold text-xl text-foreground">Authentic</h3>
+            <p className="mt-1 text-muted-foreground">Genuine products from trusted manufacturers and suppliers, with quality and product integrity at the forefront.</p>
           </div>
         </li>
         <li className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 shadow-md backdrop-blur-md transition-all hover:border-gold/40">
@@ -47,8 +51,8 @@ function AboutPage() {
             3
           </span>
           <div className="pt-1">
-            <h3 className="font-semibold text-xl text-foreground">Simple</h3>
-            <p className="mt-1 text-muted-foreground">Streamlined online ordering with real-time availability</p>
+            <h3 className="font-semibold text-xl text-foreground">Convenient</h3>
+            <p className="mt-1 text-muted-foreground">Simple ordering, dependable service, and convenient purchasing for individual customers and businesses.</p>
           </div>
         </li>
         <li className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 shadow-md backdrop-blur-md transition-all hover:border-gold/40">
@@ -57,7 +61,7 @@ function AboutPage() {
           </span>
           <div className="pt-1">
             <h3 className="font-semibold text-xl text-foreground">Curated</h3>
-            <p className="mt-1 text-muted-foreground">Focused selection: less overwhelm, more quality</p>
+            <p className="mt-1 text-muted-foreground">A focused selection of fitness essentials and performance products. Less clutter, more of what athletes and fitness businesses actually need.</p>
           </div>
         </li>
       </ol>
