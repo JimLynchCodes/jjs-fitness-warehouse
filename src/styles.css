@@ -1,0 +1,190 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Pineapple Xpress design system.
+ * Dark charcoal, warm amber glow, smoke-shop-at-night mood.
+ * Fonts: Bebas Neue (display) + Barlow (body), loaded via <link> in __root.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ember: var(--ember);
+  --color-overlay: var(--overlay);
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-body: "Barlow", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.16 0.008 60);
+  --foreground: oklch(0.95 0.015 85);
+  --card: oklch(0.2 0.012 60 / 72%);
+  --card-foreground: oklch(0.95 0.015 85);
+  --popover: oklch(0.2 0.012 60);
+  --popover-foreground: oklch(0.95 0.015 85);
+  --primary: oklch(0.82 0.145 82);
+  --primary-foreground: oklch(0.18 0.03 82);
+  --secondary: oklch(0.26 0.015 60 / 80%);
+  --secondary-foreground: oklch(0.93 0.02 85);
+  --muted: oklch(0.26 0.012 60);
+  --muted-foreground: oklch(0.72 0.02 85);
+  --accent: oklch(0.3 0.03 70);
+  --accent-foreground: oklch(0.95 0.02 85);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.9 0.03 85 / 14%);
+  --input: oklch(0.9 0.03 85 / 16%);
+  --ring: oklch(0.82 0.145 82);
+  --gold: oklch(0.82 0.145 82);
+  --gold-soft: oklch(0.9 0.09 88);
+  --ember: oklch(0.66 0.17 55);
+  --overlay: oklch(0.14 0.01 60 / 62%);
+  --overlay-deep: oklch(0.11 0.01 60 / 84%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+/* Slow cinematic drift for the background media layer */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.18) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@utility animate-kenburns {
+  animation: kenburns 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes drift-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-drift-up {
+  opacity: 0;
+  animation: drift-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes ember-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@utility animate-ember-pulse {
+  animation: ember-pulse 3.2s ease-in-out infinite;
+}
+
+/* Slightly transparent charcoal wash that sits over the background media */
+@utility overlay-wash {
+  background:
+    linear-gradient(
+      to bottom,
+      var(--overlay-deep) 0%,
+      var(--overlay) 35%,
+      var(--overlay) 60%,
+      var(--overlay-deep) 100%
+    );
+}
+
+@utility text-glow-gold {
+  text-shadow:
+    0 0 24px oklch(0.82 0.145 82 / 35%),
+    0 2px 30px oklch(0 0 0 / 60%);
+}
+
+/* Slide In from Right & Fade In */
+@keyframes route-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@utility animate-route-enter {
+  animation: route-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slide Up & Fade In (Vertical alternative) */
+@keyframes route-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-route-slide-up {
+  animation: route-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
